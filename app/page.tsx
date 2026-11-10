@@ -41,6 +41,8 @@ function StructuredData() {
         installUrl: site.app.downloadUrl,
         inLanguage: "ko",
         isAccessibleForFree: true,
+        copyrightYear: 2026,
+        copyrightHolder: { "@type": "Organization", name: site.copyright },
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
         publisher: { "@id": `${site.url}/#publisher` },
         featureList: weapons.map((w) => `${w.name}(${w.verb}): ${w.desc}`),
@@ -280,8 +282,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="wrap footer-in">
-          <p>© 2026 Screen Smash</p>
-          <p>Mac, macOS는 Apple Inc.의 상표입니다.</p>
+          <p>© 2026 {site.copyright}</p>
         </div>
       </footer>
     </>

@@ -185,7 +185,7 @@ h1, h2, h3, p { word-break: keep-all; }
 
 /* ── 바닥 */
 .footer { border-top: 1px solid var(--line); }
-.footer-in { padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--text-5); }
+.footer-in { padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px; font-size: 13px; color: var(--text-5); }
 .footer p { margin: 0; white-space: nowrap; }
 
 /* ── 좁은 화면 */
