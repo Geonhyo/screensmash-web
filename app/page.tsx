@@ -1,5 +1,5 @@
 import { CrackedScreen, FinalCracks, Icon, LogoMark, icons } from "@/components/Art";
-import { NotifyForm, ShareButton } from "@/components/Interactive";
+import { NotifyForm, ShareButton, WindowsNotify } from "@/components/Interactive";
 import { faqs, site, weapons } from "@/lib/site";
 
 /** 검색 엔진·AI가 읽는 구조화 데이터(JSON-LD). 화면에 보이는 내용과 같아야 한다. */
@@ -241,13 +241,19 @@ export default function Home() {
         <section className="wrap split not-mobile">
           <div className="req">
             <h2>시스템 요구사항</h2>
-            <dl>
-              <div><dt>운영체제</dt><dd>{site.app.minOS} 이상</dd></div>
-              <div><dt>칩</dt><dd>Apple Silicon · Intel</dd></div>
-              <div><dt>권한</dt><dd>화면 기록 하나</dd></div>
-              <div><dt>가격</dt><dd>무료</dd></div>
-              <div><dt>Windows</dt><dd className="dim">준비 중</dd></div>
-            </dl>
+            <div className="req-card">
+              <h3 className="req-os">Mac</h3>
+              <dl>
+                <div><dt>운영체제</dt><dd>{site.app.minOS} 이상</dd></div>
+                <div><dt>칩</dt><dd>Apple Silicon · Intel</dd></div>
+                <div><dt>가격</dt><dd>무료</dd></div>
+              </dl>
+            </div>
+            <div className="req-card">
+              <h3 className="req-os">Windows</h3>
+              <p className="req-note">아직 지원하지 않아요. 준비 중이에요.</p>
+              <WindowsNotify />
+            </div>
           </div>
           <div className="faq">
             <h2>자주 묻는 질문</h2>

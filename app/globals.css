@@ -152,11 +152,18 @@ h1, h2, h3, p { word-break: keep-all; }
 .split h2 { margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -0.01em; }
 .req { flex: 1 1 320px; }
 .faq { flex: 1.4 1 420px; }
+.req-card { display: flex; flex-direction: column; gap: 14px; padding: 22px 24px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+.req-os { margin: 0; font-size: 18px; font-weight: 700; }
+.req-note { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-3); }
+.req-card .btn { align-self: flex-start; }
+.btn-quiet { background: transparent; color: var(--text); border: 1px solid rgba(255, 255, 255, 0.22); }
+.btn-quiet:hover { background: rgba(255, 255, 255, 0.06); filter: none; }
 .req dl { margin: 0; display: flex; flex-direction: column; }
 .req dl > div { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line-strong); }
+.req dl > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.req dl > div:first-child { padding-top: 0; }
 .req dt { color: var(--text-4); }
 .req dd { margin: 0; font-weight: 500; text-align: right; }
-.req dd.dim { color: var(--text-4); }
 .faq-list { display: flex; flex-direction: column; gap: 10px; }
 .faq details { padding: 20px 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .faq summary { cursor: pointer; list-style: none; font-size: 17px; font-weight: 700; }

@@ -38,7 +38,7 @@ export function ShareButton({ className = "btn" }: { className?: string }) {
 type Status = "idle" | "sending" | "done" | "error";
 
 /** Windows 등: 출시 알림 이메일 신청. 서버(/api/notify)가 Discord 웹훅으로 넘긴다. */
-export function NotifyForm({ id }: { id: string }) {
+export function NotifyForm({ id, autoFocus = false }: { id: string; autoFocus?: boolean }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -92,6 +92,7 @@ export function NotifyForm({ id }: { id: string }) {
           name="email"
           required
           autoComplete="email"
+          autoFocus={autoFocus}
           placeholder="you@example.com"
           value={email}
           onChange={(e) => {
@@ -110,5 +111,16 @@ export function NotifyForm({ id }: { id: string }) {
       </div>
       {status === "error" && <div role="alert" className="alert">{error}</div>}
     </form>
+  );
+}
+
+/** 시스템 요구사항의 Windows 칸: 버튼을 누르면 그 자리에서 메일 입력 칸이 열린다. */
+export function WindowsNotify() {
+  const [open, setOpen] = useState(false);
+  if (open) return <NotifyForm id="email-req" autoFocus />;
+  return (
+    <button type="button" className="btn btn-quiet" onClick={() => setOpen(true)}>
+      출시 알림 받기
+    </button>
   );
 }
