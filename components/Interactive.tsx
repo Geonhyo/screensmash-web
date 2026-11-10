@@ -109,7 +109,6 @@ export function NotifyForm({ id }: { id: string }) {
         </button>
       </div>
       {status === "error" && <div role="alert" className="alert">{error}</div>}
-      <p className="notify-note">메일 주소는 Windows 출시 알림을 보내는 데만 써요.</p>
     </form>
   );
 }

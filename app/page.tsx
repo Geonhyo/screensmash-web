@@ -118,9 +118,12 @@ export default function Home() {
         {/* 히어로 */}
         <section id="top" className="wrap hero">
           <div className="hero-copy">
-            <div className="badge">
-              <Icon d={icons.laptop} size={14} stroke="#C9CBD1" width={2} />
-              {site.app.minOS} 이상
+            <div className="badges">
+              <span className="badge badge-free">무료</span>
+              <span className="badge">
+                <Icon d={icons.laptop} size={14} stroke="#C9CBD1" width={2} />
+                {site.app.minOS} 이상
+              </span>
             </div>
             <h1>
               지금 보고 있는

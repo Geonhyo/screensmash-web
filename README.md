@@ -6,14 +6,14 @@ macOS 앱 Screen Smash의 한 장짜리 소개 페이지. Next.js(App Router)로
 ## 개발
 
 ```
-npm install
-npm run dev        # http://localhost:3000
-npm run build      # 배포 전 확인
+pnpm install
+pnpm dev           # http://localhost:3000
+pnpm build         # 배포 전 확인
 ```
 
 ## 배포(Vercel)
 
-1. Vercel에서 이 저장소를 Import한다(Framework: Next.js, 설정 그대로).
+1. Vercel에서 이 저장소를 Import한다(Framework: Next.js, 설정 그대로). `pnpm-lock.yaml`과 `packageManager`를 보고 pnpm으로 설치한다.
 2. Settings → Environment Variables (`.env.example` 참고)
    - `NEXT_PUBLIC_SITE_URL` — 정식 도메인(예: `https://screensmash.app`). 비우면 Vercel 프로덕션 주소를 쓴다. canonical·sitemap·OG 이미지 주소가 이 값으로 만들어진다.
    - `DISCORD_WEBHOOK_URL` — Windows 출시 알림 신청이 쌓일 Discord 채널의 웹훅. 서버에서만 쓴다. 없으면 신청이 실패로 표시된다(신청이 사라지지 않게).
