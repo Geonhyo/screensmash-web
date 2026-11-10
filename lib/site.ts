@@ -18,7 +18,7 @@ export const site = {
   title: "Screen Smash — 내 Mac 화면을 부수는 스트레스 해소 게임",
   description:
     "망치, 전기톱, 기관총, 화염방사기 등 10가지 무기로 지금 보고 있는 Mac 화면을 부수는 무료 게임. 진짜 화면과 파일은 그대로이고, ESC 한 번이면 흔적 없이 사라져요. macOS 14 이상, Apple Silicon·Intel 지원.",
-  publisher: "MoreThanDay",
+  publisher: "nookin.dev",
   /** 저작권자(바닥 글·구조화 데이터) */
   copyright: "nookin.dev",
   locale: "ko_KR",
