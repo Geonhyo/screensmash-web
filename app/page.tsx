@@ -253,7 +253,7 @@ export default function Home() {
             <h2>자주 묻는 질문</h2>
             <div className="faq-list">
               {faqs.map((f, i) => (
-                <details key={f.q} open={i === 0}>
+                <details key={f.q} name="faq" open={i === 0}>
                   <summary><h3>{f.q}</h3></summary>
                   <p>{f.a}</p>
                 </details>

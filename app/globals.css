@@ -116,7 +116,7 @@ h1, h2, h3, p { word-break: keep-all; }
 
 /* ── 안심 띠 */
 .band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-band); }
-.trust { margin: 0; padding-top: 28px; padding-bottom: 28px; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.trust { margin: 0 auto; padding-top: 28px; padding-bottom: 28px; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 64px; }
 .trust li { display: flex; gap: 12px; align-items: center; font-size: 15px; color: #e4e5e8; }
 .trust svg { flex: none; }
 
